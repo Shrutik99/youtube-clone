@@ -1,7 +1,6 @@
 const VideoCard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
-  console.log(info);
 
   return (
     <div className="m-2 w-80 h-72 shadow-lg">
@@ -11,6 +10,14 @@ const VideoCard = ({ info }) => {
         <li>{channelTitle}</li>
         <li>{statistics.viewCount} Views</li>
       </ul>
+    </div>
+  );
+};
+
+export const AdVideoCard = ({ info }) => {
+  return (
+    <div className="p-1 m-1 border border-orange-600">
+      <VideoCard info={info} />
     </div>
   );
 };
